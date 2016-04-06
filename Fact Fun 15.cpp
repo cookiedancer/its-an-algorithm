@@ -2,7 +2,7 @@
 // Name: It's an Algorithm , Joseph, James, Michelle, Tonya, Eva Contributors
 // Group Project CS110 Prof Looms
 // Date: 3_22_2016
-// Version: 12
+// Version: 15
 // Program Name: FactFun
 // Program Description: Helps students practice multiplication facts
 //************************************************************************************************
@@ -12,9 +12,9 @@
 
 #include <cmath>                   // Library for the math functions
 #include <iostream>                // Library for cout, cin
-#include <stdlib.h>                // Library for
+#include <stdlib.h>                // Library for 
 #include <time.h>                  // Library allows access to random functions
-#include <limits>                  // Library for
+#include <limits>                  // Library for 
 #include <string>                  // Library for string and getline
 
 using namespace std;               // Allows access to where the libraries make the declarations
@@ -47,11 +47,11 @@ using namespace std;               // Allows access to where the libraries make 
 	int a;                        // a is the first integer for the math problem
 	int b;                        // b is the second integer for the math problem
 	int answer;                   // answer will be the computer programs solution and will be an integer
-    const string stry = "y";
-    const string strY = "Y";
-    const string strn = "n";
-    const string strN = "N";
-    char oops;
+        const string stry = "y";
+        const string strY = "Y";
+        const string strn = "n";
+        const string strN = "N";
+        char oops;
 
         //Welcome student to Fact Fun Math Trainer
         cout << "Welcome to FactFun Math Trainer" << endl;
@@ -75,7 +75,7 @@ using namespace std;               // Allows access to where the libraries make 
 		b = rand() % 13;
         answer = a * b;                      //Calculates the correct answer
 
-		cout << "Solve the equation " << a << " x " << b << " = " ;   //Prints a problem
+	cout << "Solve the equation " << a << " x " << b << " = " ;   //Prints a problem
         cout << " " << endl;
 
         int guess = getInt();
