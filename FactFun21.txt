@@ -1,0 +1,65 @@
+
+#include <cmath> // pulls from cmath library
+#include <iostream>
+#include <stdlib.h>
+#include <time.h> // library allows access to random functions
+#include <limits>
+using namespace std;
+
+int main ()
+{
+	char again;
+	int a, b, answer; // defines integers
+	float guess;
+
+	cout <<  "Welcome to FactFun Math Trainer\n"
+             " \n"
+        	 "I'm PRODUCTO, your FactFun Personal Tutor.\n"
+        	 "We will practice multiplication facts until you get it right!\n"
+        	 " \n"
+             "Each time you solve a problem or answer a question,\n"
+             "please press the Enter key when you are done.\n"
+             " \n"
+             "Let's get started!\n"
+             " " << endl;
+
+	again='Y';
+	while ((again=='y') || (again=='Y'))
+	{
+		srand ( time(NULL) ); 
+		a = rand() % 13;
+		b = rand() % 13;
+
+		cout << "Solve the equation " << a << "x" << b << "=" ;
+		cin >> guess;
+		             while(cin.fail())
+                        {
+			             cin.clear();
+			             cin.ignore(numeric_limits<int>::max(),'\n');
+	    		         cout << "Please enter a valid response" << endl;
+	    		         cin >> guess;
+                        }
+         answer = a*b;   
+
+                    while (answer != guess)
+		             {
+	    		    cout << "Incorrect. Please try again" << endl;
+	    		    cout << "Solve the equation " << a << "x" << b << "=";
+	    		    cin >> guess;
+	    		         while(cin.fail())
+			             {
+			             cin.clear();
+			             cin.ignore(numeric_limits<int>::max(),'\n');
+	    		         cout << "Please enter a valid response" << endl;
+	    		         cin >> guess;
+	    		        }
+                     }
+		if (answer == guess)
+			cout << "Correct. Would you like to try another problem? Press Y to continue, and any other key to exit the program.";
+			cin >> again;
+	}
+
+	return 0;
+}
+
+
