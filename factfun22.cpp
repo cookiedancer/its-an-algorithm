@@ -80,7 +80,7 @@ int main ()			// int main is the function that the CPU will call to start the pr
                         "Press Y to continue, and any other key to exit the program.";
 			cin >> again;
 			cin.clear();
-			cin.ignore(numeric_limits<int>::max(),'\n');
+			cin.ignore(numeric_limits<int>::max(),'\n') ;
 		}
 	}
 	return 0;
