@@ -23,19 +23,19 @@ int main ()			// int main is the function that the CPU will call to start the pr
 
     char again = 'y';	// again is the user's response to questions go again or try again, initialized as y
     int a, b, answer; 	// a and b are the two randomly generated integers, answer is the program generated answer
-	float guess;		// guess is the user's math answer
+    float guess;	// guess is the user's math answer
 
 // Initial User Interface
 
 	cout << "Welcome to FactFun Math Trainer \n"
-            " \n"
+                " \n"
         	"I'm PRODUCTO, your FactFun Personal Tutor. \n"
         	"We will practice multiplication facts until you get it right! \n"
         	" \n"
-            "Don’t forget to press Enter key when you are done.\n"
+                "Donâ€™t forget to press Enter key when you are done.\n"
            	" \n"
            	"Let's get started! \n"
-          << endl;
+              << endl;
 
 
 	while ((again=='y') || (again=='Y')) 	// while loop keeps the program giving problems as long as the student replies with a y or Y
@@ -50,37 +50,37 @@ int main ()			// int main is the function that the CPU will call to start the pr
 		cin >> guess;							                    // takes in the user input and stores it in guess
 
 		             while(cin.fail())				// enter the loop if the user does not enter a float number
-                       	 {
+                       	     {
                             cin.clear();					// resets the error state so it will check correctly the next time in the loop
-                            cin.ignore(numeric_limits<int>::max(),'\n');	    //  ignores the rest of the input or until the \n is found
+                            cin.ignore(numeric_limits<int>::max(),'\n');	//  ignores the rest of the input or until the \n is found
                             cout << "Please enter a valid response" << endl;    // prompts the user to enter input again
                             cin >> guess;					// takes the user input and stores it in guess
-                       	 }
+                       	     }
 
 
                     while (answer != guess)			// enter the loop if the user entered the wrong answer
-		            {
+		    {
                         cout << "Incorrect. Please try again" << endl;	// gives the user another chance to answer
                         cout << "Solve the equation " << a << " x " << b << " = ";		// prints the same problem again
                         cin >> guess;
 
-	    		         while(cin.fail())
-			             {
+	    		    while(cin.fail())
+			    {
                             cin.clear();
                             cin.ignore(numeric_limits<int>::max(),'\n');
                             cout << "Please enter a valid response" << endl;
                             cin >> guess;
-	    		        }
+	    		    }
                     }
 		if (answer == guess)
 		{
 			cin.clear();
 			cin.ignore(numeric_limits<int>::max(),'\n');
 			cout << "Correct. Would you like to try another problem? \n"
-                    "Press Y to continue, and any other key to exit the program.";
+                        "Press Y to continue, and any other key to exit the program.";
 			cin >> again;
 			cin.clear();
-			cin.ignore(100, '\n');
+			cin.ignore(numeric_limits<int>::max(),'\n');
 		}
 	}
 	return 0;
