@@ -1,0 +1,4 @@
+Loan Amount:     50000.00
+Interest Rate:   0.0524
+Number of years: 7
+Monthly payment: 712.35
