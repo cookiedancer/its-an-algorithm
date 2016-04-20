@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int  Square(int s);		    // Prototypes
+int  Cube(int c);
+void  DisplayMessage(string msg, int n);// Prototype
+
+int  main()
+{
+
+    int s = Square(27) ;
+
+    DisplayMessage( "square", s);
+
+    int c = Cube(27);
+
+    DisplayMessage ("cube", c);
+
+
+
+    return 0;
+}
+
+int Square(int n)
+{
+    return n * n;
+}
+
+int Cube(int n)
+{
+    return n * n * n;
+}
+
+void DisplayMessage (string msg,int n)
+{
+    cout << "My number is 27.'\n" ;
+    cout << "The " << msg << " of my number is " << n << endl;
+
+}
+
+
