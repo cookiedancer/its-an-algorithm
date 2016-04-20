@@ -2,9 +2,9 @@
 #include <string>
 using namespace std;
 
-int  Square(int s);		    // Prototypes
-int  Cube(int c);
-void  DisplayMessage(string msg, int n);// Prototype
+int  Square(int);		    // Prototypes
+int  Cube(int);
+void  DisplayMessage(string, int);// Prototype
 
 int  main()
 {
